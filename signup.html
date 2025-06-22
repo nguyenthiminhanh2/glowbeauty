@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng ký</title>
+  <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-auth-compat.js"></script>
+</head>
+<body>
+  <h2>Đăng ký</h2>
+  <input type="email" id="email" placeholder="Email"><br>
+  <input type="password" id="password" placeholder="Mật khẩu"><br>
+  <button id="signupBtn">Đăng ký</button>
+  <button id="googleSignUpBtn">Đăng ký bằng Google</button>
+
+  <script src="firebase-config.js"></script>
+  <script>
+    const auth = firebase.auth();
+
+    document.getElementById("signupBtn").addEventListener("click", () => {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      auth.createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          alert("Đăng ký thành công!");
+          window.location.href = "index.html";
+        })
+        .catch((error) => {
+          alert(error.message);
+        });
+    });
+
+    document.getElementById("googleSignUpBtn").addEventListener("click", () => {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      auth.signInWithPopup(provider)
+        .then((result) => {
+          alert(`Chào ${result.user.displayName}`);
+          window.location.href = "index.html";
+        })
+        .catch((error) => {
+          alert("Lỗi đăng nhập Google: " + error.message);
+        });
+    });
+  </script>
