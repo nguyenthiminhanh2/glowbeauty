@@ -1,4 +1,4 @@
-export const products = [
+const products = [
     {
       name: "Innisfree No-Sebum Mineral Powder",
       price: 150000,

@@ -276,3 +276,24 @@ body {
   .product-card.active .shop-now {
     display: block;
   }
+
+  #product-list {
+    display: flex
+  }
+
+  #authForm input {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  button {
+    padding: 6px 12px;
+    border: 1px solid #999;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  button:hover {
+    background-color: #eee;
+  }
+  

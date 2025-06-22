@@ -1,74 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GlowBeauty</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="navbar">
-<div class="logo">GlowBeauty</div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GlowBeauty</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="logo">GlowBeauty</div>
 
-<nav class="nav-links">
-    <div class="dropdown">
-        <a href="#">Catalog</a>
-        <div class="dropdown-content">
-            <a href="#">Lipstick</a>
-            <a href="#">Mascara</a>
-            <a href="#">Foundation</a>
-            <a href="#">Eyeliner</a>
-            <a href="#">Eyeshadow</a>
+            <nav class="nav-links">
+                <div class="dropdown">
+                    <a href="#">Catalog</a>
+                    <div class="dropdown-content">
+                        <a href="#">Lipstick</a>
+                        <a href="#">Mascara</a>
+                        <a href="#">Foundation</a>
+                        <a href="#">Eyeliner</a>
+                        <a href="#">Eyeshadow</a>
+                    </div>
+                </div>
+                <a href="#">About us</a>
+                <a href="#">Delivery</a>
+            </nav>
+
+            <div class="search-section">
+                <input type="text" placeholder="Search">
+                <button><i class="fa fa-search">🔍</i></button>
+            </div>
+
+            <div class="icons">
+                <span>🤍</span>
+                <span>🛒<sup>(0)</sup></span>
+            </div>
+
+            <button id="logInButton">Log In</button>
+            <button id="logOutButton">Log Out</button>
+            <!-- <button id="logInGoogleButton">Log In Google</button> -->
+        </header>
+
+        <section class="hero">
+            <div class="hero-image">
+                <!-- <img src="Glowbeauty/1.jpg" alt=""> -->
+            </div>
+        </section>
+        <div class="wrapper">
+            <div class="container">
+                <div class="left">
+                    <img src="./img/modle.jpg" alt="Model Image">
+                </div>
+                <div class="right">
+                    <div class="right-content">
+                        <h1>GLOW</h1>
+                        <p>
+                            <em>Find your own unique vibe</em> with motifs <br>
+                            <strong>inspired by Seoul</strong>, the place we
+                            live in every <br>
+                            day, and the Seoulites who create their <br>
+                            own iconic lifestyle and culture.
+                        </p>
+                        <button>SHOW CATALOG</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <a href="#">About us</a>
-    <a href="#">Delivery</a>
-</nav>
 
-<div class="search-section">
-    <input type="text" placeholder="Search">
-    <button><i class="fa fa-search">🔍</i></button>
-</div>
+        <section class="product-section">
+            <h2>Best Sellers</h2>
+            <div id="product-list"></div>
+        </section>
 
-<div class="icons">
-    <span>🤍</span>
-    <span>🛒<sup>(0)</sup></span>
-  </div>
-
-  <button class="login-btn">Log in</button>
-    </header>
-
-    <section class="hero">
-        <div class="hero-image">
-            <img src="Glowbeauty/1.jpg" alt="">
-        </div>
-    </section>
-<div class="wrapper">
-<div class="container">
-    <div class="left">
-       <img src="modle.jpg" alt="Model Image">
-    </div>
-<div class="right">
-    <div class="right-content">
-<h1>GLOW</h1>
-<p>
-    <em>Find your own unique vibe</em> with motifs <br>
-        <strong>inspired by Seoul</strong>, the place we live in every <br>
-        day, and the Seoulites who create their <br>
-        own iconic lifestyle and culture.
-</p>
-<button>SHOW CATALOG</button>
-</div>
-</div>   
-</div> 
-</div> 
-
-<section class="product-section">
-   <h2>Best Sellers</h2>
-  <div id="productList"></div>
-</section>
-
-<script src="./product.js" type="module"></script>
-<script type="module" src="./main.js"></script>
-</body>
+        <script
+            src="https://www.gstatic.com/firebasejs/10.13.2/firebase-compat.js"></script>
+        <script src="./js/firebase-config.js"></script>
+        <script src="./js/product.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
 </html>

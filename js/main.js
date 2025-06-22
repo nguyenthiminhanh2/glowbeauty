@@ -1,6 +1,6 @@
-import { products } from './product.js';
+// import { products } from '../html/./js/product.js';
 
-const container = document.getElementById('productList');
+const container = document.getElementById('product-list');
 
 // render sản phẩm
 products.forEach((product) => {
@@ -28,3 +28,19 @@ products.forEach((product) => {
 
   container.appendChild(card);
 });
+
+CheckUserIsLogin()
+
+function CheckUserIsLogin() {
+  firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+      var uid = user.uid;
+      console.log("User is signed in:", user);
+      // ...
+  } else {
+      // User is signed out
+      // ...
+      console.log("No user is signed in.");
+  }
+  });
+}
