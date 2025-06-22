@@ -21,15 +21,6 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     });
   });
 
-  document.getElementById('logoutBtn').addEventListener('click', () => {
-    firebase.auth().signOut()
-    .then(() => {
-        console.log("User signed out.");
-    })
-    .catch((error) => {
-        console.error("Error signing out:", error);
-    });
-});
 
 
   
