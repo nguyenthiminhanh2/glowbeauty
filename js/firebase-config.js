@@ -10,6 +10,9 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
+// Kết nối Firestore
+const db = firebase.firestore();
+
 // let email = "Minhanh123@gmail.com";
 // let password = "123456";
 

@@ -2,10 +2,14 @@
 
 const container = document.getElementById('product-list');
 
+let currentPosition = 0;
+const itemWidth = 270;
+const visibleItems = 5;
+
 // render sản phẩm
 products.forEach((product) => {
   const card = document.createElement('div');
-  card.classList.add('product-card'); // ❗m bị sai dòng này nè (dùng classList.add đúng cách)
+  card.classList.add('product-card'); 
 
   card.innerHTML = `
     <img src="${product.image}" alt="${product.name}" style="width:100%; border-radius: 10px;">
@@ -28,6 +32,32 @@ products.forEach((product) => {
 
   container.appendChild(card);
 });
+
+// hiệu ứng nút di chuyển
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+nextBtn.addEventListener('click', () => {
+  container.scrollBy({
+    left: itemWidth * visibleItems,
+    behavior: 'smooth'
+  });
+});
+
+prevBtn.addEventListener('click', () => {
+  container.scrollBy({
+    left: -itemWidth * visibleItems,
+    behavior: 'smooth'
+  });
+});
+
+document.getElementById("nextBtn").onclick = () => {
+  const totalItems = container.children.length;
+  if (currentPosition > -(itemWidth * (totalItems - visibleItems))) {
+     currentPosition += itemWidth;
+     container.style.transform = 'translateX(${currentPosition}px)';
+  }
+};
 
 displayUserInfo()
 

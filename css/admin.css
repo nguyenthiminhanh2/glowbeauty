@@ -1,0 +1,93 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h2, h3 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+  }
+  
+  .admin-form {
+    max-width: 500px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .admin-form input,
+  .admin-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+  }
+  
+  .admin-form input:focus,
+  .admin-form textarea:focus {
+    outline: none;
+    border-color: #ff69b4;
+  }
+  
+  .admin-form button {
+    padding: 12px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .admin-form button:hover {
+    background-color: #e556a8;
+  }
+  
+  /* Danh sách sản phẩm */
+  #productList {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  
+  #productList div {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  #productList img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  #productList button {
+    margin-top: 10px;
+    background-color: #ff6961;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #productList button:hover {
+    background-color: #e05c56;
+  }
+  

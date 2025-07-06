@@ -3,7 +3,7 @@ const products = [
       name: "Innisfree No-Sebum Mineral Powder",
       price: 150000,
       description: "Oil-controlling powder from Jeju Island that keeps your skin smooth all day.",
-      image: "https://static.beautyamart.com/innisfree-powder.jpg"
+      image: ""
     },
     {
       name: "3CE Velvet Lip Tint",

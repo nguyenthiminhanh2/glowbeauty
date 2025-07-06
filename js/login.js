@@ -5,6 +5,11 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     const password = document.getElementById("password").value.trim();
 
     console.log(email, password)
+
+    if (email === "admin@gmail.com" && password  === "admin") {
+        window.location.href = "./admin.html"
+        return
+    }
   
     firebase.auth().signInWithEmailAndPassword(email, password)
     .then((userCredential) => {

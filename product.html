@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Đăng ký</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chi tiết sản phẩm</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/product.css">
 </head>
 <body>
   <header class="navbar">
@@ -38,25 +39,29 @@
         <span>
             🛒<sup id="cart-count">(0)</sup>
         </span>
-        <button onclick="addToCart()">Add to Cart</button>
+        <!-- <button id="addToCartBtn">Add to Cart</button> -->
     </div>
     <button id="logInButton" onclick="window.location.href='./login.html'">Log In</button>
     <p id="user-info"></p>
     <button id="logOutButton">Log Out</button>
     <!-- <button id="logInGoogleButton">Log In Google</button> -->
 </header>
-  <div class="wrapper">
-  <div class="form-container">
-    <h2>Đăng ký</h2>
-    <input type="email" id="email" placeholder="Email">
-    <input type="password" id="password" placeholder="Mật khẩu">
-    <button id="signupBtn">Đăng ký</button>
-    <p id="message"></p>
-    <p>Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+  <div class="product-container">
+    <div class="product-image">
+      <img id="product-img" src="" alt="Hình sản phẩm" />
+    </div>
+    <div class="product-details">
+      <h1 id="product-name">Tên sản phẩm</h1>
+      <p id="product-price" class="price">0 USD</p>
+      <p id="product-description" class="description">Mô tả sản phẩm</p>
+      <button class="buy-button">Buy now</button>
+      <button id="addToCartBtn">Add to Cart</button>
+
+    </div>
   </div>
 
-  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-compat.js"></script>
-  <script src="./js/firebase-config.js"></script>
-  <script src="./js/signup.js"></script>
+  <script src="./js/cart.js"></script>
+  <script src="./js/product-detail.js"></script>
+
 </body>
 </html>

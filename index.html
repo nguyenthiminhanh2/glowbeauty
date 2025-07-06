@@ -14,28 +14,33 @@
                 <div class="dropdown">
                     <a href="#">Catalog</a>
                     <div class="dropdown-content">
-                        <a href="#">Lipstick</a>
-                        <a href="#">Mascara</a>
-                        <a href="#">Foundation</a>
-                        <a href="#">Eyeliner</a>
-                        <a href="#">Eyeshadow</a>
+                        <a href="lipstick.html">Lipstick</a>
+                        <a href="mascara.html">Mascara</a>
+                        <a href="foundation.html">Foundation</a>
+                        <a href="eyeliner.html">Eyeliner</a>
+                        <a href="eyeshadow.html">Eyeshadow</a>
+                        <a href="admin.html">sale</a>
                     </div>
                 </div>
-                <a href="#">About us</a>
-                <a href="#">Delivery</a>
+                <a href="about.html">About us</a>
+                <a href="delivery.html">Delivery</a>
             </nav>
 
             <div class="search-section">
-                <input type="text" placeholder="Search">
-                <button><i class="fa fa-search">🔍</i></button>
+                <input type="text" id="searchInput" placeholder="Search">
+                <button onclick="searchFunction()">
+                    <i class="fa fa-search">🔍</i>
+                </button>
             </div>
 
             <div class="icons">
                 <span>🤍</span>
-                <span>🛒<sup>(0)</sup></span>
+                <span>
+                    🛒<sup id="cart-count">(0)</sup>
+                </span>
+                <button onclick="addToCart()">Add to Cart</button>
             </div>
-
-            <button id="logInButton">Log In</button>
+            <button id="logInButton" onclick="window.location.href='./login.html'">Log In</button>
             <p id="user-info"></p>
             <button id="logOutButton">Log Out</button>
             <!-- <button id="logInGoogleButton">Log In Google</button> -->
@@ -49,7 +54,7 @@
         <div class="wrapper">
             <div class="container">
                 <div class="left">
-                    <img src="./img/modle.jpg" alt="Model Image">
+                    <img src="img/4.jpg" alt="Model Image">
                 </div>
                 <div class="right">
                     <div class="right-content">
@@ -61,7 +66,7 @@
                             day, and the Seoulites who create their <br>
                             own iconic lifestyle and culture.
                         </p>
-                        <button>SHOW CATALOG</button>
+                        <button> Welcome</button>
                     </div>
                 </div>
             </div>
@@ -69,13 +74,136 @@
 
         <section class="product-section">
             <h2>Best Sellers</h2>
-            <div id="product-list"></div>
+            <div class="slider-wrapper">
+                <button id="prevBtn">←</button>
+                <div id="product-list" class="product-container"></div>
+                <button id="nextBtn">→</button>
+            </div>
         </section>
+         
+        <section>
+    <div class="full-banner">
+        <img src="img/5.jpg" alt="Banner Image">
+      </div>
+        </section>
+        
+         <section class="about-section">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="img/6.jpg" alt="Mask Image" />
+                </div>
+                <div class="about-text">
+                    <h2>LumiBloom — where skincare meets radiance</h2>
+                    <p>
+                        At GlowBeauty, we believe that makeup is more than a
+                        routine—
+                        it's a moment of self-care, a ritual of renewal. Our
+                        formulas are
+                        designed to nourish, hydrate, and enhance your natural
+                        glow,
+                        using only carefully selected ingredients.
+                    </p>
+                    <p>
+                        We combine science-backed, botanical-infused formulas
+                        with clean,
+                        cruelty-free, and vegan ingredients in sustainable
+                        packaging,
+                        creating a simple yet luxurious self-care ritual for
+                        your skin.
+                    </p>
+                    <a href="about.html" class="read-more-btn">Read more →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="contact-img">
+                <img src="img/8.jpg" alt="Contact Image">
+            </div>
+            <div class="contact-form">
+                <h2>How we can help you?</h2>
+                <form>
+                    <div class="input-row">
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <textarea placeholder="Message" required></textarea>
+                    <button type="submit">Send your message</button>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <div class="full-banner">
+                <img src="img/7.jpg" alt="Banner Image">
+              </div>
+                </section>
+
+        <section class="shop-section">
+            <h2><span>Shop</span> <em>By Category</em></h2>
+
+            <div class="category-tabs">
+                <button class="tab active" data-category="all">All</button>
+                <button class="tab" data-category="lipstick">Lipstick</button>
+                <button class="tab"
+                    data-category="foundation">Foundation</button>
+                <button class="tab" data-category="eyeliner">Eyeliner</button>
+            </div>
+
+            <div id="product-grid" class="product-grid"></div>
+
+            <div class="shop-all-btn">
+                <button id="shopAllBtn">Shop All</button>
+            </div>
+        </section>
+      
+
+        <footer class="custom-footer">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h2 class="logo">GlowBeauty</h2>
+                </div>
+                <div class="footer-column">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">Bestsellers</a></li>
+                        <li><a href="#">Skin Care</a></li>
+                        <li><a href="#">Cleansing</a></li>
+                        <li><a href="#">Hydration & Nourishment</a></li>
+                        <li><a href="#">Body Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Clients</h4>
+                    <ul>
+                        <li><a href="#">Shipping and Delivery</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Social</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
 
         <script
             src="https://www.gstatic.com/firebasejs/10.13.2/firebase-compat.js"></script>
         <script src="./js/firebase-config.js"></script>
+        <script src="./js/category.js"></script>
         <script src="./js/product.js"></script>
         <script src="./js/main.js"></script>
+        <script src="./js/search.js"></script>
+        <!-- <script src="./js/login.js"></script> -->
+        <!-- <script src="./js/signup.js"></script> -->
+        <script src="./js/contact.js"></script>
+        <!-- <script src="./js/script.js"></script> -->
+        <!-- <script src="./js/shop.js"></script> -->
     </body>
 </html>

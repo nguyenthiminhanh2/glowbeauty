@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mascara</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">GlowBeauty</div>
+
+        <nav class="nav-links">
+            <div class="dropdown">
+                <a href="#">Catalog</a>
+                <div class="dropdown-content">
+                    <a href="lipstick.html">Lipstick</a>
+                    <a href="mascara.html">Mascara</a>
+                    <a href="foundation.html">Foundation</a>
+                    <a href="eyeliner.html">Eyeliner</a>
+                    <a href="eyeshadow.html">Eyeshadow</a>
+                    <a href="admin.html">sale</a>
+                </div>
+            </div>
+            <a href="about.html">About us</a>
+            <a href="delivery.html">Delivery</a>
+        </nav>
+
+        <div class="search-section">
+            <input type="text" id="searchInput" placeholder="Search">
+            <button onclick="searchFunction()">
+                <i class="fa fa-search">🔍</i>
+            </button>
+        </div>
+
+        <div class="icons">
+            <span>🤍</span>
+            <span>
+                🛒<sup id="cart-count">(0)</sup>
+            </span>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <button id="logInButton" onclick="window.location.href='./login.html'">Log In</button>
+        <p id="user-info"></p>
+        <button id="logOutButton">Log Out</button>
+        <!-- <button id="logInGoogleButton">Log In Google</button> -->
+    </header>
+    <h1> About GlowBeauty</h1>
+    <p> This is where you can write all about your brand</p>
+    <a href="index.html" class=""> Back yo Home</a>
+</body>
+</html>
