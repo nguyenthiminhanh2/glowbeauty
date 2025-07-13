@@ -8,7 +8,7 @@
     </head>
     <body>
         <header class="navbar">
-            <div class="logo">GlowBeauty</div>
+           <div class="logo">GlowBeauty</div>
 
             <nav class="nav-links">
                 <div class="dropdown">
@@ -19,11 +19,10 @@
                         <a href="foundation.html">Foundation</a>
                         <a href="eyeliner.html">Eyeliner</a>
                         <a href="eyeshadow.html">Eyeshadow</a>
-                        <a href="admin.html">sale</a>
+                        <a href="product_for_sale.html">Sale</a>
                     </div>
                 </div>
                 <a href="about.html">About us</a>
-                <a href="delivery.html">Delivery</a>
             </nav>
 
             <div class="search-section">
@@ -38,11 +37,11 @@
                 <span>
                     🛒<sup id="cart-count">(0)</sup>
                 </span>
-                <button onclick="addToCart()">Add to Cart</button>
+                <!-- <button onclick="addToCart()">Add to Cart</button> -->
             </div>
-            <button id="logInButton" onclick="window.location.href='./login.html'">Log In</button>
+            <button id="logInButton" onclick="window.location.href='./signup.html'">Signup</button>
             <p id="user-info"></p>
-            <button id="logOutButton">Log Out</button>
+            <button id="logOutButton" >Log out</button>
             <!-- <button id="logInGoogleButton">Log In Google</button> -->
         </header>
 
@@ -73,18 +72,12 @@
         </div>
 
         <section class="product-section">
-            <h2>Best Sellers</h2>
+            <h2 class="best-sellers-title">Best Sellers</h2>
             <div class="slider-wrapper">
                 <button id="prevBtn">←</button>
                 <div id="product-list" class="product-container"></div>
                 <button id="nextBtn">→</button>
             </div>
-        </section>
-         
-        <section>
-    <div class="full-banner">
-        <img src="img/5.jpg" alt="Banner Image">
-      </div>
         </section>
         
          <section class="about-section">
@@ -122,12 +115,12 @@
             </div>
             <div class="contact-form">
                 <h2>How we can help you?</h2>
-                <form>
+                <form id="contactForm">
                     <div class="input-row">
-                        <input type="text" placeholder="Name" required>
-                        <input type="email" placeholder="Email" required>
+                        <input type="text" id="name" placeholder="Name" required>
+                        <input type="email" id="email" placeholder="Email" required>
                     </div>
-                    <textarea placeholder="Message" required></textarea>
+                    <textarea id="message" placeholder="Message" required></textarea>
                     <button type="submit">Send your message</button>
                 </form>
             </div>
@@ -135,29 +128,27 @@
 
         <section>
             <div class="full-banner">
-                <img src="img/7.jpg" alt="Banner Image">
+                <img src="img/11.jpg" alt="Banner Image">
               </div>
                 </section>
 
-        <section class="shop-section">
-            <h2><span>Shop</span> <em>By Category</em></h2>
-
-            <div class="category-tabs">
-                <button class="tab active" data-category="all">All</button>
-                <button class="tab" data-category="lipstick">Lipstick</button>
-                <button class="tab"
-                    data-category="foundation">Foundation</button>
-                <button class="tab" data-category="eyeliner">Eyeliner</button>
-            </div>
-
-            <div id="product-grid" class="product-grid"></div>
-
-            <div class="shop-all-btn">
-                <button id="shopAllBtn">Shop All</button>
-            </div>
-        </section>
-      
-
+                <section class="shop-section">
+                    <h2 class="shop-by-category-title">Shop By Category</h2>
+                    <div class="category-tabs">
+                        <button class="tab active" data-category="all">All</button>
+                        <button class="tab" data-category="lipstick">Lipstick</button>
+                        <button class="tab"
+                            data-category="foundation">Foundation</button>
+                        <button class="tab" data-category="eyeliner">Eyeliner</button>
+                    </div>
+        
+                    <div id="product-grid" class="product-grid"></div>
+        
+                    <div class="shop-all-btn">
+                        <button id="shopAllBtn">Shop All</button>
+                    </div>
+                </section>
+                  
         <footer class="custom-footer">
             <div class="footer-content">
                 <div class="footer-column">
@@ -198,7 +189,7 @@
         <script src="./js/firebase-config.js"></script>
         <script src="./js/category.js"></script>
         <script src="./js/product.js"></script>
-        <script src="./js/main.js"></script>
+        <script src="./js/auth.js"></script>
         <script src="./js/search.js"></script>
         <!-- <script src="./js/login.js"></script> -->
         <!-- <script src="./js/signup.js"></script> -->

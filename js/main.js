@@ -33,6 +33,7 @@ products.forEach((product) => {
   container.appendChild(card);
 });
 
+
 // hiệu ứng nút di chuyển
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
@@ -59,7 +60,7 @@ document.getElementById("nextBtn").onclick = () => {
   }
 };
 
-displayUserInfo()
+// displayUserInfo()
 
 // function CheckUserIsLogin() {
 //   firebase.auth().onAuthStateChanged((user) => {

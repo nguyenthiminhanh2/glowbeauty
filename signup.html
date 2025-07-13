@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Đăng ký</title>
+  <link rel="stylesheet" href="./css/acc.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   <header class="navbar">
-    <div class="logo">GlowBeauty</div>
+    <a href="index.html" class="logo">GlowBeauty</a>
 
     <nav class="nav-links">
         <div class="dropdown">
@@ -19,11 +20,10 @@
                 <a href="foundation.html">Foundation</a>
                 <a href="eyeliner.html">Eyeliner</a>
                 <a href="eyeshadow.html">Eyeshadow</a>
-                <a href="admin.html">sale</a>
+                <a href="product_for_sale.html">Sale</a>
             </div>
         </div>
         <a href="about.html">About us</a>
-        <a href="delivery.html">Delivery</a>
     </nav>
 
     <div class="search-section">
@@ -38,22 +38,59 @@
         <span>
             🛒<sup id="cart-count">(0)</sup>
         </span>
-        <button onclick="addToCart()">Add to Cart</button>
+        <!-- <button onclick="addToCart()">Add to Cart</button> -->
     </div>
-    <button id="logInButton" onclick="window.location.href='./login.html'">Log In</button>
-    <p id="user-info"></p>
-    <button id="logOutButton">Log Out</button>
-    <!-- <button id="logInGoogleButton">Log In Google</button> -->
 </header>
-  <div class="wrapper">
-  <div class="form-container">
-    <h2>Đăng ký</h2>
-    <input type="email" id="email" placeholder="Email">
-    <input type="password" id="password" placeholder="Mật khẩu">
-    <button id="signupBtn">Đăng ký</button>
+<div class="auth-page">
+<div class="auth-wrapper">
+  <div class="auth-container">
+    <h2>Sign Up</h2>
+    <form class="auth-form" id="signupForm">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <!-- <button id="signupBtn">Sign Up</button> -->
+      <button type="submit">Sign Up</button>
+
+    </form>
     <p id="message"></p>
-    <p>Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+    <p>Already have an account?<a href="login.html">Log In</a></p>
   </div>
+</div>
+</div>
+  <footer class="custom-footer">
+    <div class="footer-content">
+        <div class="footer-column">
+            <h2 class="logo">GlowBeauty</h2>
+        </div>
+        <div class="footer-column">
+            <h4>Shop</h4>
+            <ul>
+                <li><a href="#">Bestsellers</a></li>
+                <li><a href="#">Skin Care</a></li>
+                <li><a href="#">Cleansing</a></li>
+                <li><a href="#">Hydration & Nourishment</a></li>
+                <li><a href="#">Body Care</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Clients</h4>
+            <ul>
+                <li><a href="#">Shipping and Delivery</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Payment Options</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Reviews</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Social</h4>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Pinterest</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
 
   <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-compat.js"></script>
   <script src="./js/firebase-config.js"></script>

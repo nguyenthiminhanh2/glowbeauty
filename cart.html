@@ -8,7 +8,7 @@
 </head>
 <body>
     <header class="navbar">
-        <div class="logo">GlowBeauty</div>
+        <a href="index.html" class="logo">GlowBeauty</a>
 
         <nav class="nav-links">
             <div class="dropdown">
@@ -19,11 +19,10 @@
                     <a href="foundation.html">Foundation</a>
                     <a href="eyeliner.html">Eyeliner</a>
                     <a href="eyeshadow.html">Eyeshadow</a>
-                    <a href="admin.html">sale</a>
+                    <a href="product_for_sale.html">Sale</a>
                 </div>
             </div>
             <a href="about.html">About us</a>
-            <a href="delivery.html">Delivery</a>
         </nav>
 
         <div class="search-section">
@@ -38,16 +37,55 @@
             <span>
                 🛒<sup id="cart-count">(0)</sup>
             </span>
-            <button onclick="addToCart()">Add to Cart</button>
+            <!-- <button onclick="addToCart()">Add to Cart</button> -->
         </div>
-        <button id="logInButton" onclick="window.location.href='./login.html'">Log In</button>
+        <button id="logInButton" onclick="window.location.href='./signup.html'">Signup</button>
         <p id="user-info"></p>
-        <button id="logOutButton">Log Out</button>
+        <button id="logOutButton" >Log out</button>
         <!-- <button id="logInGoogleButton">Log In Google</button> -->
     </header>
  <h2>Giỏ hàng của bạn</h2>
 <div id="cartItems"></div>
+
+<footer class="custom-footer">
+    <div class="footer-content">
+        <div class="footer-column">
+            <h2 class="logo">GlowBeauty</h2>
+        </div>
+        <div class="footer-column">
+            <h4>Shop</h4>
+            <ul>
+                <li><a href="#">Bestsellers</a></li>
+                <li><a href="#">Skin Care</a></li>
+                <li><a href="#">Cleansing</a></li>
+                <li><a href="#">Hydration & Nourishment</a></li>
+                <li><a href="#">Body Care</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Clients</h4>
+            <ul>
+                <li><a href="#">Shipping and Delivery</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Payment Options</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Reviews</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Social</h4>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Pinterest</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
 <script src="./js/cart.js"></script>
+<script
+        src="https://www.gstatic.com/firebasejs/10.13.2/firebase-compat.js"></script>
+    <script src="./js/firebase-config.js"></script>
+    <script src="./js/auth.js"></script>
 <!-- <script src="./js/product-detail.js"></script> -->
 </body>
 </html>

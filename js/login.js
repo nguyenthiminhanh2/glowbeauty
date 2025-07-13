@@ -16,12 +16,14 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
         // Signed in 
         var user = userCredential.user;
         console.log("User signed in:", user);
+        alert("Login success")
         window.location.href = "./index.html"
         // ...
     })
     .catch((error) => {
         var errorCode = error.code;
         var errorMessage = error.message;
+        alert("Login failed")
         // ..
     });
   });
