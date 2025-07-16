@@ -30,6 +30,7 @@ function renderProducts(category, limit = 6) {
       <h4>${p.name}</h4>
       <p>${p.description ? p.description.slice(0, 60) + '...' : 'No description available.'}</p>
       <span style="color: #ff3c78; font-weight: bold;">${p.price ? `${p.price} USD` : 'N/A'}</span>
+      <a href="product.html?id=${p.id}" class="shop-now-btn">SHOP NOW</a>
     `;
     grid.appendChild(a);
   });

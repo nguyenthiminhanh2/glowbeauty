@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>GlowBeauty</title>
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/product.css">
     </head>
     <body>
         <header class="navbar">
@@ -31,14 +32,10 @@
                     <i class="fa fa-search">🔍</i>
                 </button>
             </div>
+            <a href="cart.html" style="text-decoration: none; color: inherit;">
+                🛒<sup id="cart-count">(0)</sup>
+            </a>
 
-            <div class="icons">
-                <span>🤍</span>
-                <span>
-                    🛒<sup id="cart-count">(0)</sup>
-                </span>
-                <!-- <button onclick="addToCart()">Add to Cart</button> -->
-            </div>
             <button id="logInButton" onclick="window.location.href='./signup.html'">Signup</button>
             <p id="user-info"></p>
             <button id="logOutButton" >Log out</button>
@@ -52,38 +49,36 @@
         </section>
         <div class="wrapper">
             <div class="container">
-                <div class="left">
-                    <img src="img/4.jpg" alt="Model Image">
+              <!-- Khung trái: ảnh -->
+              <div class="left">
+                <img src="img/4.jpg" alt="Model Image">
+              </div>
+          
+              <!-- Khung phải: nội dung -->
+              <div class="right">
+                <div class="right-content">
+                  <h1>GLOW</h1>
+                  <p>
+                    <em>Find your own unique vibe</em> with motifs <br>
+                    <strong>inspired by Seoul</strong>, the place we live in every day,<br>
+                    and the Seoulites who create their own iconic lifestyle and culture.
+                  </p>
+                  <button>SHOW CATALOG</button>
                 </div>
-                <div class="right">
-                    <div class="right-content">
-                        <h1>GLOW</h1>
-                        <p>
-                            <em>Find your own unique vibe</em> with motifs <br>
-                            <strong>inspired by Seoul</strong>, the place we
-                            live in every <br>
-                            day, and the Seoulites who create their <br>
-                            own iconic lifestyle and culture.
-                        </p>
-                        <button> Welcome</button>
-                    </div>
-                </div>
+              </div>
             </div>
-        </div>
+          </div>
+          
 
-        <section class="product-section">
-            <h2 class="best-sellers-title">Best Sellers</h2>
-            <div class="slider-wrapper">
-                <button id="prevBtn">←</button>
-                <div id="product-list" class="product-container"></div>
-                <button id="nextBtn">→</button>
-            </div>
-        </section>
+        <section id="best-sellers">
+            <h2>🌟 Best Sellers 🌟</h2>
+            <div class="carousel" id="bestSellerList"></div>
+          </section>
         
          <section class="about-section">
             <div class="about-container">
                 <div class="about-image">
-                    <img src="img/6.jpg" alt="Mask Image" />
+                    <img src="img/14.jpg" alt="Mask Image" />
                 </div>
                 <div class="about-text">
                     <h2>LumiBloom — where skincare meets radiance</h2>
@@ -111,7 +106,7 @@
 
         <section class="contact-section">
             <div class="contact-img">
-                <img src="img/8.jpg" alt="Contact Image">
+                <img src="img/15.jpg" alt="Contact Image">
             </div>
             <div class="contact-form">
                 <h2>How we can help you?</h2>
@@ -191,6 +186,7 @@
         <script src="./js/product.js"></script>
         <script src="./js/auth.js"></script>
         <script src="./js/search.js"></script>
+        <script src="./js/bestseller.js"></script>
         <!-- <script src="./js/login.js"></script> -->
         <!-- <script src="./js/signup.js"></script> -->
         <script src="./js/contact.js"></script>

@@ -83,9 +83,36 @@ function showSlide(product) {
 
     <button class="add-to-cart-btn">ADD TO CART</button>
   `;
+  
+// Gắn sự kiện cho nút "ADD TO CART"
+  const addBtn = body.querySelector(".add-to-cart-btn");
+addBtn.addEventListener("click", () => {
+  const quantity = parseInt(body.querySelector(".quantity-input").value) || 1;
+  const selectedColor = body.querySelector(".color-select").value;
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const existing = cart.find((item) => item.id == product.id);
+  if (existing) {
+    existing.quantity += quantity;
+  } else {
+    cart.push({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.image_link,
+      quantity: quantity,
+      color: selectedColor,
+    });
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("Đã thêm vào giỏ hàng!");
+});
 
   slide.style.display = "flex";
   document.querySelector(".close-btn").onclick = () => {
     slide.style.display = "none";
   };
 }
+
