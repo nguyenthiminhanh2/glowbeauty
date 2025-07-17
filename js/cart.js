@@ -30,6 +30,20 @@ document.addEventListener("DOMContentLoaded", () => {
         )
         .join("");
 
+        //Tính tổng tiền
+      const totalAmount = cart.reduce((total, item) => {
+      return total + item.price * item.quantity;
+      }, 0);
+
+      //Hiển thị tổng tiền
+      const totalHTML = `
+      <div style="text-align: right; font-weight: bold; font-size: 25px; margin-top: 20px; color:#E51644;">
+      Tổng tiền: ${totalAmount.toFixed(2)} USD
+      </div>
+       `;
+
+      cartContainer.innerHTML += totalHTML;
+
       // Sự kiện Xoá
       document.querySelectorAll(".remove-btn").forEach((btn) => {
         btn.addEventListener("click", (e) => {
