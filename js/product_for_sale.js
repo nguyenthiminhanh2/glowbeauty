@@ -13,7 +13,6 @@ function loadProducts() {
           <h4>${product.name}</h4>
           <p>Giá: ${product.price} USD</p>
           <p>${product.description}</p>
-          <button onclick="deleteProduct('${doc.id}')">Xóa</button>
         `;
         productList.appendChild(productItem);
       });

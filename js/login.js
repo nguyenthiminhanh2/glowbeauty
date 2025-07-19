@@ -17,7 +17,12 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
         var user = userCredential.user;
         console.log("User signed in:", user);
         alert("Login success")
-        window.location.href = "./index.html"
+        if (user.email === "admin@gmail.com") {
+            window.location.href = "admin.html";
+          } else {
+            window.location.href = "index.html";
+          }
+          
         // ...
     })
     .catch((error) => {

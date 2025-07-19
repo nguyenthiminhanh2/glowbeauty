@@ -1,5 +1,3 @@
-
-
 // Thêm sản phẩm
 document.getElementById("addProductBtn").addEventListener("click", () => {
   const name = document.getElementById("productName").value.trim();
