@@ -17,7 +17,19 @@ document.addEventListener("DOMContentLoaded", () => {
       }
   
       localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartCount(); // <-- cập nhật số lượng hiển thị
       alert("Đã thêm vào giỏ hàng!");
     });
+  
+    updateCartCount(); // <-- cập nhật ngay khi trang load
   });
+  
+  function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const cartCountElem = document.getElementById("cart-count");
+    if (cartCountElem) {
+      cartCountElem.textContent = `(${totalQuantity})`;
+    }
+  }
   

@@ -9,10 +9,10 @@ async function fetchProducts() {
   const res = await fetch("https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline");
   const data = await res.json();
   allProducts = data;
-  renderProducts("all", 6); // Mặc định chỉ hiển thị 6 sản phẩm
+  renderProducts("all", 5); 
 }
 
-function renderProducts(category, limit = 6) {
+function renderProducts(category, limit = 5) {
   grid.innerHTML = "";
 
   const filtered = category === "all"
@@ -42,11 +42,11 @@ tabs.forEach(tab => {
     tabs.forEach(t => t.classList.remove("active"));
     tab.classList.add("active");
     const cat = tab.dataset.category;
-    renderProducts(cat, 6); // vẫn hiển thị 6 khi chuyển tab
+    renderProducts(cat, 5); 
   });
 });
 
-// Bấm Shop All để hiện hết
+//Shop All để hiện hết
 shopAllBtn.addEventListener("click", () => {
   const current = document.querySelector(".tab.active").dataset.category;
   renderProducts(current, null); // null để hiển thị toàn bộ

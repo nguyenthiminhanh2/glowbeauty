@@ -57,3 +57,32 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 //   }
 //   });
 // }
+
+
+  
+//   // Google login
+//   document.getElementById("logInGoogleButton").addEventListener("click", () => {
+//     const provider = new firebase.auth.GoogleAuthProvider();
+//     firebase.auth().signInWithPopup(provider)
+//       .then((result) => {
+//         alert("Google Login thành công: " + result.user.email);
+//       })
+//       .catch((error) => {
+//         alert("Google login error: " + error.message);
+//       });
+//   });
+  
+
+// function CheckUserIsLogin() {
+//   firebase.auth().onAuthStateChanged((user) => {
+//   if (user) {
+//       var uid = user.uid;
+//       console.log("User is signed in:", user);
+//       // ...
+//   } else {
+//       // User is signed out
+//       // ...
+//       console.log("No user is signed in.");
+//   }
+//   });
+// }

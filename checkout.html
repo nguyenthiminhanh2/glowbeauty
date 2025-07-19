@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout - GlowBeauty</title>
+  <link rel="stylesheet" href="./css/checkout.css">
+</head>
+<body>
+  <div class="checkout-container">
+    <h1>Thanh Toán</h1>
+
+    <form class="checkout-form">
+      <div class="form-group">
+        <label for="fullname">Họ và Tên</label>
+        <input type="text" id="fullname" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="address">Địa chỉ giao hàng</label>
+        <input type="text" id="address" required />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Số điện thoại</label>
+        <input type="tel" id="phone" required />
+      </div>
+
+      <div class="order-summary">
+        <h2>Đơn Hàng Của Bạn</h2>
+        <ul id="orderItems" class="checkout-items">
+        </ul>
+        <p class="total">Tổng cộng: <span id="totalAmount">0 USD</span></p>
+      </div>
+
+      <button type="submit" class="submit-btn">Xác Nhận Đặt Hàng</button>
+    </form>
+  </div>
+
+  <script src="./js/checkout.js"></script>
+</body>
+</html>

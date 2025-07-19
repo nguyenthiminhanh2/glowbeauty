@@ -1,0 +1,84 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdf6f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .checkout-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: #d63384;
+  }
+  
+  .checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+  }
+  
+  .form-group input {
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  .order-summary {
+    background-color: #f9eaf1;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .order-summary ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .order-summary li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  .total {
+    font-size: 1.2rem;
+    text-align: right;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #c2185b;
+  }
+  
+  .submit-btn {
+    padding: 16px;
+    background-color: #d63384;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #c2185b;
+  }
+  

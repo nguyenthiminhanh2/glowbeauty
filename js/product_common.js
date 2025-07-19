@@ -83,8 +83,8 @@ function showSlide(product) {
 
     <button class="add-to-cart-btn">ADD TO CART</button>
   `;
-  
-// Gắn sự kiện cho nút "ADD TO CART"
+
+// Nút "ADD TO CART"
   const addBtn = body.querySelector(".add-to-cart-btn");
 addBtn.addEventListener("click", () => {
   const quantity = parseInt(body.querySelector(".quantity-input").value) || 1;

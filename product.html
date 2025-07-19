@@ -49,7 +49,20 @@
       <h1 id="product-name">Tên sản phẩm</h1>
       <p id="product-price" class="price">0 USD</p>
       <p id="product-description" class="description">Mô tả sản phẩm</p>
-      <button class="buy-button">Buy now</button>
+      <button class="buy-button" onclick="goToCheckout()">Buy Now</button>
+    <script>
+  function goToCheckout() {
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        //Đăng nhập xong thì checkout
+        window.location.href = "checkout.html";
+      } else {
+        // chưa thì qua login
+        window.location.href = "login.html?redirect=checkout.html";
+      }
+    });
+  }
+</script>
       <button id="addToCartBtn">Add to Cart</button>
     </div>
   </div>
@@ -92,6 +105,7 @@
   <script src="./js/cart.js"></script>
   <script src="./js/product-detail.js"></script>
   <script src="./js/product.js"></script>
+  <script src="./js/cart-count.js"></script>
   <script
   src="https://www.gstatic.com/firebasejs/10.13.2/firebase-compat.js"></script>
 <script src="./js/firebase-config.js"></script>

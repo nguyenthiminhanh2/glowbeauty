@@ -19,7 +19,7 @@ products.forEach((product) => {
     <button style="display: none;" class="shop-now">Shop Now</button>
   `;
 
-  // sự kiện click để phóng to
+  //Click để phóng to
   card.addEventListener('click', () => {
     document.querySelectorAll('.product-card').forEach(c => {
       c.classList.remove('active');
@@ -56,7 +56,7 @@ document.getElementById("nextBtn").onclick = () => {
   const totalItems = container.children.length;
   if (currentPosition > -(itemWidth * (totalItems - visibleItems))) {
      currentPosition += itemWidth;
-     container.style.transform = 'translateX(${currentPosition}px)';
+     container.style.transform = `translateX(${currentPosition}px)`;
   }
 };
 

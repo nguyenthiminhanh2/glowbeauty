@@ -9,7 +9,7 @@
     margin: 0 auto;
   }
   
-  /* Áp dụng styling cho mỗi sản phẩm (dù không có class .product-card) */
+  /* Áp dụng styling cho mỗi sản phẩm*/
   #productList > div {
     background-color: #fff0f6;
     border-radius: 20px;
@@ -54,5 +54,5 @@
     font-size: 0.9rem;
     background-color: #e91e63;
     color: white;
-    border: none
-  
+    border: none;
+  }

@@ -649,3 +649,25 @@ body {
 .auth-form button:hover {
   background-color: #e03da3;
 }
+
+/* === ORDER BUTTON === */
+#orderBtn {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #f94c66;
+  color: white;
+  border: none;
+  border-radius: 10px; /* bo nhẹ thôi cho vuông vuông */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  float: right;          /* canh phải */
+  margin-top: 20px;
+  margin-right: 20px;
+}
+#orderBtn:hover {
+  background-color: #e03d55;
+  transform: scale(1.03);
+}
